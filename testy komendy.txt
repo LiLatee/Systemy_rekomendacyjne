@@ -1,0 +1,11 @@
+d:
+
+cd D:\Dokumenty\Systemy_rekomendacyjne\otrzymane_oprogramowanie\trvrecsys2019\Scripts
+
+activate.bat
+
+rec-popular.exe --data-path=D:\Dokumenty\Systemy_rekomendacyjne\data
+
+verify-submission --data-path=D:\Dokumenty\Systemy_rekomendacyjne\data --submission-file submission_popular.csv --test-file test.csv
+
+score-submission --data-path=D:\Dokumenty\Systemy_rekomendacyjne\data --submission-file submission_popular.csv --ground-truth-file ground_truth.csv
