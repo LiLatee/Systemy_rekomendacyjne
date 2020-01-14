@@ -10,7 +10,7 @@ default_data_directory = current_directory.joinpath('..', '..', 'data')
 
 @click.command()
 @click.option('--data-path', default=None, help='Directory for the CSV files')
-@click.option('--submission-file', default='submission_ML.csv', help='Submission CSV file')
+@click.option('--submission-file', default='xgb_gic_lic_wosh_lf350_lr002_v2_all_ut_1mln_all.csv', help='Submission CSV file')
 @click.option('--ground-truth-file', default='ground_truth.csv', help='Ground truth CSV file')
 def main(data_path, submission_file, ground_truth_file):
 

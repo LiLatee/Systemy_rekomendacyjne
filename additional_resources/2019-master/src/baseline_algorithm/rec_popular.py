@@ -18,13 +18,13 @@ def main(data_path):
     data_directory = Path(data_path) if data_path else default_data_directory
     train_csv = data_directory.joinpath('train.csv')
     test_csv = data_directory.joinpath('test.csv')
-    subm_csv = data_directory.joinpath('submission_popular22.csv')
+    subm_csv = data_directory.joinpath('submission_popular.csv')
 
     print(f"Reading {train_csv} ...")
     df_train = pd.read_csv(train_csv)
 
     # OSTATNIE DNI DANYCH
-    min_time = (df_train['timestamp'].max() - 24*60*60*1)  # godziny*minuty*sekundy*dni
+    min_time = (df_train['timestamp'].max() - 24*60*60*7)  # godziny*minuty*sekundy*dni
     mask = df_train['timestamp'] > min_time
     df_train = df_train[mask]
 
